@@ -1,0 +1,1 @@
+MyEditor, which is the main module, will call the HybridAutomata and ManageVariable in need.

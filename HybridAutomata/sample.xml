@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<automata automatavariables="x;y" name="paper1">
+	<state ID="0">
+		<name>v0</name>
+		<initial>true</initial>
+		<invariant/>
+		<changerate/>
+		<constraint x="117" y="80">
+			<height>30</height>
+			<width>30</width>
+		</constraint>
+	</state>
+	<state ID="1">
+		<name>v1</name>
+		<initial>false</initial>
+		<invariant>y&lt;5;</invariant>
+		<changerate>cr(x)=[1,2];cr(y)=1</changerate>
+		<constraint x="252" y="87">
+			<height>30</height>
+			<width>30</width>
+		</constraint>
+	</state>
+	<state ID="2"><name>v2</name><initial>false</initial><invariant>y&lt;8;	</invariant><changerate>cr(x)=[0,3];cr(y)=1</changerate><constraint x="387" y="80"><height>30</height><width>30</width></constraint></state>
+	<state ID="3"><name>v3</name><initial>false</initial><invariant>x&lt;5;</invariant><changerate>cr(x)=2;cr(y)=1</changerate><constraint x="477" y="142"><height>30</height><width>30</width></constraint></state>
+	<state ID="4"><name>v4</name><initial>false</initial><invariant>y&gt;4</invariant><changerate>cr(x)=2;cr(y)=1</changerate><constraint x="396" y="206"><height>30</height><width>30</width></constraint></state>
+	<state ID="5"><name>v5</name><initial>false</initial><invariant>y&lt;8</invariant><changerate>cr(x)=1;cr(y)=2</changerate><constraint x="247" y="214"><height>30</height><width>30</width></constraint></state>
+	<state ID="6"><name>v6</name><initial>false</initial><invariant/><changerate>cr(x)=0;cr(y)=0</changerate><constraint x="124" y="295"><height>30</height><width>30</width></constraint></state>
+	
+	<transition>
+		<name>e0</name>
+		<sourceid>0</sourceid>
+		<sourcename>v0</sourcename>
+		<targetid>1</targetid>
+		<targetname>v1</targetname>
+		<initial>true</initial>
+		<guard/>
+		<reset>x=1;y=1</reset>
+		<bendpoints>
+			<point x="131" y="80"/>
+			<point x="237" y="86"/>
+		</bendpoints>
+		</transition>
+	<transition><name>e1</name><sourceid>1</sourceid><sourcename>v1</sourcename><targetid>2</targetid><targetname>v2</targetname><initial>false</initial><guard>y=4</guard><reset>x=0</reset><bendpoints><point x="266" y="86"/><point x="372" y="80"/></bendpoints></transition>
+	<transition><name>e2</name><sourceid>2</sourceid><sourcename>v2</sourcename><targetid>3</targetid><targetname>v3</targetname><initial>false</initial><guard>x&gt;3</guard><reset>x=1;y=1</reset><bendpoints><point x="399" y="88"/><point x="464" y="133"/></bendpoints></transition>
+	<transition><name>e3</name><sourceid>3</sourceid><sourcename>v3</sourcename><targetid>4</targetid><targetname>v4</targetname><initial>false</initial><guard>x&gt;3</guard><reset/><bendpoints><point x="465" y="151"/><point x="407" y="196"/></bendpoints></transition>
+	<transition><name>e4</name><sourceid>4</sourceid><sourcename>v4</sourcename><targetid>5</targetid><targetname>v5</targetname><initial>false</initial><guard>y&gt;6</guard><reset/><bendpoints><point x="381" y="206"/><point x="261" y="213"/></bendpoints></transition>
+	<transition><name>e5</name><sourceid>5</sourceid><sourcename>v5</sourcename><targetid>6</targetid><targetname>v6</targetname><initial>false</initial><guard>x&gt;10</guard><reset/><bendpoints><point x="234" y="222"/><point x="136" y="286"/></bendpoints></transition>
+	<transition><name>e7</name><sourceid>5</sourceid><sourcename>v5</sourcename><targetid>2</targetid><targetname>v2</targetname><initial>false</initial><guard>y=7</guard><reset/><bendpoints><point x="257" y="203"/><point x="376" y="90"/></bendpoints></transition>
+	<transition><name>e8</name><sourceid>1</sourceid><sourcename>v1</sourcename><targetid>5</targetid><targetname>v5</targetname><initial>false</initial><guard>x&lt;3</guard><reset>y=0</reset><bendpoints><point x="251" y="101"/><point x="247" y="199"/></bendpoints></transition>
+	<transition><name>e9</name><sourceid>3</sourceid><sourcename>v3</sourcename><targetid>1</targetid><targetname>v1</targetname><initial>false</initial><guard>y&lt;2</guard><reset/><bendpoints><point x="469" y="128"/><point x="410" y="18"/><point x="265" y="80"/></bendpoints></transition>
+	<transition><name>e6</name><sourceid>4</sourceid><sourcename>v4</sourcename><targetid>2</targetid><targetname>v2</targetname><initial>false</initial><guard>x&gt;5</guard><reset/><bendpoints><point x="394" y="191"/><point x="388" y="94"/></bendpoints></transition>
+</automata>
